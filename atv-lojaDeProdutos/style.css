@@ -99,86 +99,7 @@
     color: #febd69;
     font-weight: bold;
   }
-  
-  /* Media Queries para Responsividade */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-    }
-  
-    .header-left, .header-right {
-      width: 100%;
-      justify-content: space-between;
-    }
-  
-    .search-bar {
-      margin: 10px 0;
-      width: 100%;
-    }
-  
-    .header-right {
-      justify-content: space-between;
-      width: 100%;
-    }
-  
-    .search-bar input {
-      font-size: 12px;
-    }
-  
-    .search-bar select, .search-bar button {
-      font-size: 12px;
-      padding: 8px;
-    }
-  
-    .cart img {
-      width: 25px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo img {
-      width: 100px;
-    }
-  
-    .header-left {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .location {
-      margin-top: 5px;
-      font-size: 12px;
-    }
-  
-    .search-bar {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .search-bar select, .search-bar button {
-      width: 100%;
-      margin-bottom: 5px;
-    }
-  
-    .search-bar input {
-      width: 100%;
-      margin-bottom: 5px;
-    }
-  
-    .header-right {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-    }
-  
-    .header-right div {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -188,11 +109,7 @@
   body {
     font-family: Arial, sans-serif;
   }
-  
-  .header {
-    /* Estilos do header */
-  }
-  
+
   .hero {
     display: flex;
     justify-content: space-between;
@@ -246,39 +163,9 @@
 .hero-image img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ajuste o comportamento da imagem para cobrir o contêiner */
+    object-fit: cover; /* cobrir o contêiner */
   }
-  
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 20px;
-      background: #002147;
-    }
-  
-    .hero-content {
-      align-items: center;
-      text-align: center;
-    }
-  
-    .hero-content p {
-      font-size: 18px;
-    }
-  
-    .buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .hero-image {
-        position: relative;
-        width: 100%;
-        height: auto;
-        max-height: 90vh; /* Para limitar a altura máxima em telas grandes */
-        overflow: hidden;
-      }
-  }
-  
+
   .product-slider {
     position: relative;
     max-width: 100%;
@@ -335,25 +222,6 @@
     right: 10px;
 }
 
-@media (max-width: 768px) {
-    .slide {
-        min-width: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .slide {
-        min-width: 200px;
-    }
-
-    .prev, .next {
-        font-size: 18px;
-        padding: 5px;
-    }
-}
-
-
-
 .footer {
     background-color: #0754ac; /* Mesma cor do header para manter a consistência */
     color: white;
@@ -369,7 +237,135 @@
     margin: 0;
 }
 
-@media (max-width: 480px) {
+  
+  /*  Responsividade */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .header-left, .header-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .search-bar {
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .header-right {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .search-bar input {
+      font-size: 12px;
+    }
+  
+    .search-bar select, .search-bar button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .cart img {
+      width: 25px;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        background: #002147;
+      }
+    
+      .hero-content {
+        align-items: center;
+        text-align: center;
+      }
+    
+      .hero-content p {
+        font-size: 18px;
+      }
+    
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .hero-image {
+          position: relative;
+          width: 100%;
+          height: auto;
+          max-height: 90vh; 
+          overflow: hidden;
+        }
+        .slide {
+            min-width: 250px;
+        }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      width: 100px;
+    }
+  
+    .header-left {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .location {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar select, .search-bar button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .header-right {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .header-right div {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .slide {
+        min-width: 200px;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+    .slide {
+        min-width: 200px;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 5px;
+    }
     .footer {
         padding: 15px;
         font-size: 12px;
