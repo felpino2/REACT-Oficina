@@ -8,27 +8,108 @@
 </head>
 <body>
     <main>
-        <div class="cabeca"> 
-            <p>CABECA</p>
-            <div class="logo">
-
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                  <img src="disneylogo.png" alt="Disney Logo">
+                </div>
+                <div class="location">
+                  <span>Enviar para Juscelino</span>
+                  <p>Brasília 66666-584</p>
+                </div>
+            <div class="search-bar">
+              <select>
+                <option>Todos</option>
+              </select>
+              <input type="text" placeholder="Pesquisar na Locadora">
+              <button><img src="pesquisa.png" alt="Pesquisar"></button>
             </div>
-
-            <div class="searchbar">
-                <input type="search" id="searchMovie"><br><br>
+            <div class="header-right">
+              <div class="user">
+                <p>Olá, Juscelino</p>
+                <a href="#">Conta</a>
+              </div>
+              <div class="orders">
+                <a href="#">Aluguéis</a>
+              </div>
+              <div class="cart">
+                <img src="car.png" alt="Carrinho">
+                <span>0</span>
+              </div>
             </div>
+          </header>
 
-            <div class="profile">
-                <img src="user-image.jpg" width="6%">
-            </div>
 
-            <div class="car">
-                <img src="car.png" width = "7%">
+          <section class="hero">
+            <div class="hero-content">
+              <img src="pinoquiologo.webp" alt="Pinoquio Logo">
+              <p>Alugue agora!</p>
+              <div class="buttons">
+                <a href="#" class="btn">Alugue</a>
+                <a href="#" class="btn trailer-btn">Ver Trailer</a>
+              </div>
             </div>
-        </div>
-        <div class="home">
-            <h1>LOCADORA DISNEYLANDIA</h1>
-        </div>
-    </main>
+            <div class="hero-image">
+              <img src="pinocho.jpeg" alt="disney castelo">
+            </div>
+          </section>
+        </main>
+        <section class="product-slider">
+            <h2>Filmes que você pode gostar</h2>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="produto1.jpg" alt="Produto 1">
+                        <h3>Produto 1</h3>
+                        <p>Preço: R$25,99</p>
+                </div>
+                <div class="slide">
+                    <img src="produto2.webp" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p>Preço: R$25,41</p>
+                </div>
+                <div class="slide">
+                    <img src="produto3.jpg" alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p>Preço: R$25,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto4.webp" alt="Produto 4">
+                    <h3>Produto 4</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto5.webp" alt="Produto 5">
+                    <h3>Produto 5</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto6.webp" alt="Produto 6">
+                    <h3>Produto 6</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto7.jpg" alt="Produto 4">
+                    <h3>Produto 7</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto8.jpg" alt="Produto 4">
+                    <h3>Produto 8</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+                <div class="slide">
+                    <img src="produto9.jpg" alt="Produto 4">
+                    <h3>Produto 9</h3>
+                    <p>Preço: R$35,29</p>
+                </div>
+            </div>
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+        </section>
+        <footer class="footer">
+            <p>Desenvolvido por FELPINO. 2024</p>
+        </footer>
+        <script src="slider.js"></script>
 </body>
 </html>

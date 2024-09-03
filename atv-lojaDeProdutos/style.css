@@ -1,21 +1,377 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.cabeca {
-    background-color: red;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
     display: flex;
-    height: 5vh;
-    flex-direction: row;
-    justify-content: end;
-}
-
-.searchbar {
-   margin-bottom: 1em;
-}
-
-main {
-    background-color: rgb(68, 119, 119);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0754ac; 
+    color: white;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 120px;
+    margin-right: 15px;
+  }
+  
+  .location {
+    color: #ccc;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+  }
+  
+  .search-bar select {
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    color: #333;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    flex: 1;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-bar button img {
+    width: 20px;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right div {
+    margin-left: 20px;
+  }
+  
+  .user p {
+    margin-bottom: 5px;
+  }
+  
+  .user a, .orders a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cart {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart img {
+    width: 30px;
+  }
+  
+  .cart span {
+    margin-left: 5px;
+    color: #febd69;
+    font-weight: bold;
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .header-left, .header-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .search-bar {
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .header-right {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .search-bar input {
+      font-size: 12px;
+    }
+  
+    .search-bar select, .search-bar button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .cart img {
+      width: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      width: 100px;
+    }
+  
+    .header-left {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .location {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar select, .search-bar button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .header-right {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .header-right div {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    /* Estilos do header */
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #002147;
+    color: white;
     height: 100vh;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 500px;
+  }
+  
+  .hero-content img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: white;
+    color: #002147;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .trailer-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+  
+  
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajuste o comportamento da imagem para cobrir o contêiner */
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      padding: 20px;
+      background: #002147;
+    }
+  
+    .hero-content {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 90vh; /* Para limitar a altura máxima em telas grandes */
+        overflow: hidden;
+      }
+  }
+  
+  .product-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    min-width: 300px;
+    flex: 1;
+    margin: 0 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        min-width: 200px;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+
+
+.footer {
+    background-color: #0754ac; /* Mesma cor do header para manter a consistência */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+        font-size: 12px;
+    }
 }
